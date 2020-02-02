@@ -14,7 +14,10 @@ router.get('/obtener', (req, res) => {
     var body = req.body;
     libro.insertMany({
        nombre_libro : body.nombre_libro,
-        genero: body.genero,
+              genero: body.genero,
+              autor :body.autor,
+              pais  :body.pais,
+              idioma:body.idioma
     }, (err, rest) => {
         if (err) {
 
@@ -30,7 +33,9 @@ router.get('/obtener', (req, res) => {
             $set: {
               nombre_libro : body.nombre_libro,
                     genero : body.genero,
-
+                    autor :body.autor,
+                    pais  :body.pais,
+                    idioma:body.idioma
             }
         }, (err, rest) => {
             if (err) {
