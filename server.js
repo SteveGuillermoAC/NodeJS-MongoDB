@@ -17,7 +17,7 @@ app.use(morgan('dev'));
 app.use('/',index_libro);
 
 //port
-var port = process.env.PORT || 1234
+var port = process.env.PORT || 3000
 app.listen(port,() =>{
     console.log('Iniciado', port)
 })
